@@ -32,6 +32,7 @@ public class TicTacToe {
 		
 		JFrame frame = new JFrame("Tic-Tac-Toe");
 		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		frame.add(view);
 		frame.pack();
 		frame.setVisible(true);
 		
