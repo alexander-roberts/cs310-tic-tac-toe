@@ -32,24 +32,25 @@ import javax.swing.*;
 		
 <span class="nc" id="L33">		JFrame frame = new JFrame(&quot;Tic-Tac-Toe&quot;);</span>
 <span class="nc" id="L34">		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);</span>
-<span class="nc" id="L35">		frame.pack();</span>
-<span class="nc" id="L36">		frame.setVisible(true);</span>
+<span class="nc" id="L35">		frame.add(view);</span>
+<span class="nc" id="L36">		frame.pack();</span>
+<span class="nc" id="L37">		frame.setVisible(true);</span>
 		
         
         /* MAIN LOOP */
 
-<span class="nc bnc" id="L41" title="All 2 branches missed.">        while (!model.isGameover()){</span>
+<span class="nc bnc" id="L42" title="All 2 branches missed.">        while (!model.isGameover()){</span>
             
-<span class="nc" id="L43">            view.viewModel();</span>
+<span class="nc" id="L44">            view.viewModel();</span>
             
         }
         
         /* Game is over; show the final board and the winner */
 
-<span class="nc" id="L49">        view.viewModel();</span>
+<span class="nc" id="L50">        view.viewModel();</span>
 
-<span class="nc" id="L51">        view.showResult(model.getResult().toString());</span>
+<span class="nc" id="L52">        view.showResult(model.getResult().toString());</span>
 
-<span class="nc" id="L53">    }</span>
+<span class="nc" id="L54">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.7.9.201702052155</span></div></body></html>

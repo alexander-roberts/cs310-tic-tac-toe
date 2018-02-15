@@ -44,7 +44,7 @@ public class TicTacToeView extends JPanel implements ActionListener {
 	
     public void viewModel() {
         
-<span class="nc bnc" id="L47" title="All 2 branches missed.">		for(int i=0;i&lt;model.getWidth();i++){</span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">		for(int i=0;i&lt;model.getWidth();i++){ //traverse view and update buttons</span>
 <span class="nc bnc" id="L48" title="All 2 branches missed.">			for(int j=0;j&lt;model.getWidth();j++)</span>
 <span class="nc bnc" id="L49" title="All 2 branches missed.">				if(model.getMark(i,j) == TicTacToeModel.Mark.EMPTY)</span>
 <span class="nc" id="L50">					squares[i][j].setText(&quot;-&quot;);</span>
