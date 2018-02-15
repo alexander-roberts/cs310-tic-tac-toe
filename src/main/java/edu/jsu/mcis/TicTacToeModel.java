@@ -95,6 +95,7 @@ public class TicTacToeModel{
 				grid[row][col] = Mark.X;
 			else
 				grid[row][col] = Mark.O;
+			xTurn  = !xTurn;
 			return true;
 		}
         return false;
