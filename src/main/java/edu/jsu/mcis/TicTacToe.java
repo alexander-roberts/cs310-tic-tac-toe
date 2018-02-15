@@ -1,7 +1,8 @@
+package edu.jsu.mcis;
+import java.io.*;
 import java.awt.*;
 import java.awt.event.*;
-
-package edu.jsu.mcis;
+import javax.swing.*;
 
 public class TicTacToe {
 

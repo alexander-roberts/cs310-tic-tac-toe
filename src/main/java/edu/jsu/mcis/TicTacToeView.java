@@ -1,5 +1,8 @@
 package edu.jsu.mcis;
 import java.io.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
 
 public class TicTacToeView extends JPanel implements ActionListener {
 
@@ -14,7 +17,7 @@ public class TicTacToeView extends JPanel implements ActionListener {
         
         this.model = model;
 		squares = new JButton[model.getWidth()][model.getWidth()];
-		squaresPanel = new JPanel(new GridLayout(model.getWidth(),model.getWidth());
+		squaresPanel = new JPanel(new GridLayout(model.getWidth(),model.getWidth()));
 		// loop through every row and col
 		for(int row=0;i<model.getWidth();row++){
 			for(int col=0;j<model.getWidth();col++){
