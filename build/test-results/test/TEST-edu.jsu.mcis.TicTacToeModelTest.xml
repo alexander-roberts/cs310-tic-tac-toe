@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="edu.jsu.mcis.TicTacToeModelTest" tests="12" skipped="0" failures="7" errors="0" timestamp="2018-02-14T23:47:12" hostname="null" time="0.005">
+<testsuite name="edu.jsu.mcis.TicTacToeModelTest" tests="12" skipped="0" failures="7" errors="0" timestamp="2018-02-15T00:00:42" hostname="null" time="0.008">
   <properties/>
-  <testcase name="testGameIsWonByXDiagonallyFromTopLeftToBottomRight" classname="edu.jsu.mcis.TicTacToeModelTest" time="0.004">
+  <testcase name="testGameIsWonByXDiagonallyFromTopLeftToBottomRight" classname="edu.jsu.mcis.TicTacToeModelTest" time="0.005">
     <failure message="java.lang.AssertionError: expected:&lt;none&gt; but was:&lt;X&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;none&gt; but was:&lt;X&gt;
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
@@ -340,7 +340,7 @@
 </failure>
   </testcase>
   <testcase name="testInitialBoardIsEmpty" classname="edu.jsu.mcis.TicTacToeModelTest" time="0.0"/>
-  <testcase name="testXWinDiagonallyFromTopLeftToBottomRightOn5x5Board" classname="edu.jsu.mcis.TicTacToeModelTest" time="0.0">
+  <testcase name="testXWinDiagonallyFromTopLeftToBottomRightOn5x5Board" classname="edu.jsu.mcis.TicTacToeModelTest" time="0.001">
     <failure message="java.lang.AssertionError: expected:&lt;O&gt; but was:&lt;X&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;O&gt; but was:&lt;X&gt;
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotEquals(Assert.java:834)
