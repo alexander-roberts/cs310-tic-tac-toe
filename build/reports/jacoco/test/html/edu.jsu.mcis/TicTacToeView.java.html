@@ -38,53 +38,55 @@ public class TicTacToeView extends JPanel implements ActionListener {
 <span class="nc" id="L38">    }</span>
 	
 	public void actionPerformed(ActionEvent e){
-<span class="nc" id="L41">		String button = ((JButton)e.getSource()).getName();</span>
-<span class="nc" id="L42">		model.makeMark(button.charAt(6),button.charAt(7));</span>
-<span class="nc" id="L43">		resultLabel.setText(button);</span>
-<span class="nc" id="L44">	}</span>
+		
+<span class="nc" id="L42">		String button = ((JButton)e.getSource()).getName();</span>
+<span class="nc" id="L43">		System.out.println(button);</span>
+<span class="nc" id="L44">		model.makeMark(button.charAt(6),button.charAt(7));</span>
+<span class="nc" id="L45">		resultLabel.setText(button);</span>
+		
+<span class="nc" id="L47">	}</span>
 	
     public void viewModel() {
         
-<span class="nc bnc" id="L48" title="All 2 branches missed.">		for(int i=0;i&lt;model.getWidth();i++){ //traverse view and update buttons</span>
-<span class="nc bnc" id="L49" title="All 2 branches missed.">			for(int j=0;j&lt;model.getWidth();j++)</span>
-<span class="nc bnc" id="L50" title="All 2 branches missed.">				if(model.getMark(i,j) == TicTacToeModel.Mark.EMPTY)</span>
-<span class="nc" id="L51">					squares[i][j].setText(&quot;-&quot;);</span>
+<span class="nc bnc" id="L51" title="All 2 branches missed.">		for(int i=0;i&lt;model.getWidth();i++){ //traverse view and update buttons</span>
+<span class="nc bnc" id="L52" title="All 2 branches missed.">			for(int j=0;j&lt;model.getWidth();j++)</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">				if(model.getMark(i,j) == TicTacToeModel.Mark.EMPTY)</span>
+<span class="nc" id="L54">					squares[i][j].setText(&quot;-&quot;);</span>
 				else
-<span class="nc" id="L53">					squares[i][j].setText(model.getMark(i,j).toString());</span>
+<span class="nc" id="L56">					squares[i][j].setText(model.getMark(i,j).toString());</span>
 		}
-		
-<span class="nc" id="L56">    }</span>
+<span class="nc" id="L58">    }</span>
 
     public void showNextMovePrompt() {
 
         /* Display a prompt for the player's next move (see examples) */
-<span class="nc" id="L61">		String s = &quot;&quot;;</span>
+<span class="nc" id="L63">		String s = &quot;&quot;;</span>
 		
-<span class="nc" id="L63">		s+=&quot;Player &quot;;</span>
-<span class="nc bnc" id="L64" title="All 2 branches missed.">		if(model.isXTurn())</span>
-<span class="nc" id="L65">			s+=&quot;1 (X) &quot;;</span>
+<span class="nc" id="L65">		s+=&quot;Player &quot;;</span>
+<span class="nc bnc" id="L66" title="All 2 branches missed.">		if(model.isXTurn())</span>
+<span class="nc" id="L67">			s+=&quot;1 (X) &quot;;</span>
 		else
-<span class="nc" id="L67">			s+=&quot;2 (O) &quot;;</span>
-<span class="nc" id="L68">		s+=&quot;Move:\nEnter the row and column numbers, separated by a space:&quot;;</span>
+<span class="nc" id="L69">			s+=&quot;2 (O) &quot;;</span>
+<span class="nc" id="L70">		s+=&quot;Move:\nEnter the row and column numbers, separated by a space:&quot;;</span>
 		
-<span class="nc" id="L70">		resultLabel.setText(s);</span>
-<span class="nc" id="L71">    }</span>
+<span class="nc" id="L72">		resultLabel.setText(s);</span>
+<span class="nc" id="L73">    }</span>
 
     public void showInputError() {
 
         /* Display an error if input is invalid (see examples) */
 
-<span class="nc" id="L77">        resultLabel.setText(&quot;\nThere was a problem with your input. Please try again.&quot;);</span>
+<span class="nc" id="L79">        resultLabel.setText(&quot;\nThere was a problem with your input. Please try again.&quot;);</span>
 
-<span class="nc" id="L79">    }</span>
+<span class="nc" id="L81">    }</span>
 
     public void showResult(String r) {
 
         /* Display final winner */
 
-<span class="nc" id="L85">        resultLabel.setText(r + &quot;!&quot;);</span>
+<span class="nc" id="L87">        resultLabel.setText(r + &quot;!&quot;);</span>
 
-<span class="nc" id="L87">    }</span>
+<span class="nc" id="L89">    }</span>
 	
 	
 	
