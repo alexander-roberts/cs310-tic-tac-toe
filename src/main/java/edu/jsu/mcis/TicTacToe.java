@@ -1,3 +1,6 @@
+import java.awt.*;
+import java.awt.event.*;
+
 package edu.jsu.mcis;
 
 public class TicTacToe {
@@ -25,14 +28,18 @@ public class TicTacToe {
 
         TicTacToeModel model = new TicTacToeModel(width);
         TicTacToeView view = new TicTacToeView(model);
-        TicTacToeController controller = new TicTacToeController(model, view);
+		
+		JFrame frame = new JFrame("Tic-Tac-Toe");
+		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		frame.pack();
+		frame.setVisible(true);
+		
         
         /* MAIN LOOP */
 
         while (!model.isGameover()){
             
             view.viewModel();
-            controller.controlModel();
             
         }
         
