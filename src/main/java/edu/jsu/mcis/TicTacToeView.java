@@ -19,8 +19,8 @@ public class TicTacToeView extends JPanel implements ActionListener {
 		squares = new JButton[model.getWidth()][model.getWidth()];
 		squaresPanel = new JPanel(new GridLayout(model.getWidth(),model.getWidth()));
 		// loop through every row and col
-		for(int row=0;i<model.getWidth();row++){
-			for(int col=0;j<model.getWidth();col++){
+		for(int row=0;row<model.getWidth();row++){
+			for(int col=0;col<model.getWidth();col++){
 				squares[row][col] = new JButton();
 				squares[row][col].addActionListener(this);
 				squares[row][col].setName("Square" + row + col);
@@ -37,8 +37,8 @@ public class TicTacToeView extends JPanel implements ActionListener {
 		add(resultLabel);
     }
 	
-	public void ActionPerformed(ActionEvent e){
-		String button = e.getSource().getName();
+	public void actionPerformed(ActionEvent e){
+		String button = ((JButton)e.getSource()).getName();
 		model.makeMark(button.charAt(6),button.charAt(7));
 	}
 	
