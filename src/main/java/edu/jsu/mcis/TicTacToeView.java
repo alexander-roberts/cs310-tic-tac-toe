@@ -25,7 +25,7 @@ public class TicTacToeView extends JPanel implements ActionListener {
 				squares[row][col].addActionListener(this);
 				squares[row][col].setName("Square" + row + col);
 				squares[row][col].setPreferredSize(new Dimension(64, 64));
-				squares[row][col].setText("-");
+				squares[row][col].setText(" ");
 				squaresPanel.add(squares[row][col]);
 			}
 		}

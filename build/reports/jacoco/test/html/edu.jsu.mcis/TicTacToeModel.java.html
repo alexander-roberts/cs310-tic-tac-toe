@@ -96,16 +96,18 @@ public class TicTacToeModel{
 			else
 <span class="fc" id="L97">				grid[row][col] = Mark.O;</span>
 <span class="fc bfc" id="L98" title="All 2 branches covered.">			xTurn  = !xTurn;</span>
-<span class="fc" id="L99">			return true;</span>
+<span class="fc" id="L99">			System.out.println(&quot;&quot;+row+&quot;,&quot;+col+&quot; updated.&quot;);</span>
+<span class="fc" id="L100">			return true;</span>
+			
 		}
-<span class="fc" id="L101">        return false;</span>
+<span class="fc" id="L103">        return false;</span>
     }
 	
     private boolean isValidSquare(int row, int col) {
         
         /* Return true if specified location is within grid bounds */
 
-<span class="fc bfc" id="L108" title="All 8 branches covered.">        return (row &gt; -1 &amp;&amp; row &lt; width &amp;&amp; col &gt; -1 &amp;&amp; col &lt; width);</span>
+<span class="fc bfc" id="L110" title="All 8 branches covered.">        return (row &gt; -1 &amp;&amp; row &lt; width &amp;&amp; col &gt; -1 &amp;&amp; col &lt; width);</span>
         
     }
 	
@@ -113,7 +115,7 @@ public class TicTacToeModel{
         
         /* Return true if square at specified location is marked */
         
-<span class="fc bfc" id="L116" title="All 2 branches covered.">        return (getMark(row,col) != Mark.EMPTY);</span>
+<span class="fc bfc" id="L118" title="All 2 branches covered.">        return (getMark(row,col) != Mark.EMPTY);</span>
             
     }
 	
@@ -121,7 +123,7 @@ public class TicTacToeModel{
         
         /* Return mark from the square at the specified location */
         
-<span class="fc" id="L124">       return grid[row][col]; </span>
+<span class="fc" id="L126">       return grid[row][col]; </span>
     }
 	
     public Result getResult() {
@@ -130,13 +132,13 @@ public class TicTacToeModel{
            tie, or if the game is not over, and return the corresponding Result
            value */
         
-<span class="fc bfc" id="L133" title="All 2 branches covered.">        if(isMarkWin(Mark.X))</span>
-<span class="fc" id="L134">			return Result.X;</span>
-<span class="fc bfc" id="L135" title="All 2 branches covered.">		if(isMarkWin(Mark.O))</span>
-<span class="fc" id="L136">			return Result.O;</span>
-<span class="fc bfc" id="L137" title="All 2 branches covered.">		if(isTie())</span>
-<span class="fc" id="L138">			return Result.TIE;</span>
-<span class="fc" id="L139">		return Result.NONE;</span>
+<span class="fc bfc" id="L135" title="All 2 branches covered.">        if(isMarkWin(Mark.X))</span>
+<span class="fc" id="L136">			return Result.X;</span>
+<span class="fc bfc" id="L137" title="All 2 branches covered.">		if(isMarkWin(Mark.O))</span>
+<span class="fc" id="L138">			return Result.O;</span>
+<span class="fc bfc" id="L139" title="All 2 branches covered.">		if(isTie())</span>
+<span class="fc" id="L140">			return Result.TIE;</span>
+<span class="fc" id="L141">		return Result.NONE;</span>
 
     }
 	
@@ -146,56 +148,56 @@ public class TicTacToeModel{
            winner */
         
 		//check rows
-<span class="fc" id="L149">		boolean win = true;</span>
+<span class="fc" id="L151">		boolean win = true;</span>
 		
-<span class="fc bfc" id="L151" title="All 2 branches covered.">		for(int i=0;i&lt;width;i++) {</span>
-<span class="fc" id="L152">			win = true;</span>
-<span class="fc bfc" id="L153" title="All 2 branches covered.">			for(int j=0;j&lt;width;j++){</span>
-<span class="fc bfc" id="L154" title="All 2 branches covered.">				if(grid[i][j] != mark)</span>
-<span class="fc" id="L155">					win = false;	</span>
+<span class="fc bfc" id="L153" title="All 2 branches covered.">		for(int i=0;i&lt;width;i++) {</span>
+<span class="fc" id="L154">			win = true;</span>
+<span class="fc bfc" id="L155" title="All 2 branches covered.">			for(int j=0;j&lt;width;j++){</span>
+<span class="fc bfc" id="L156" title="All 2 branches covered.">				if(grid[i][j] != mark)</span>
+<span class="fc" id="L157">					win = false;	</span>
 			}
-<span class="fc bfc" id="L157" title="All 2 branches covered.">			if(win)</span>
-<span class="fc" id="L158">				return true;</span>
+<span class="fc bfc" id="L159" title="All 2 branches covered.">			if(win)</span>
+<span class="fc" id="L160">				return true;</span>
 		}
 		//check columns
-<span class="fc bfc" id="L161" title="All 2 branches covered.">		for(int i=0;i&lt;width;i++) {</span>
-<span class="fc" id="L162">			win = true;</span>
-<span class="fc bfc" id="L163" title="All 2 branches covered.">			for(int j=0;j&lt;width;j++){</span>
-<span class="fc bfc" id="L164" title="All 2 branches covered.">				if(grid[j][i] != mark)</span>
-<span class="fc" id="L165">					win = false;	</span>
+<span class="fc bfc" id="L163" title="All 2 branches covered.">		for(int i=0;i&lt;width;i++) {</span>
+<span class="fc" id="L164">			win = true;</span>
+<span class="fc bfc" id="L165" title="All 2 branches covered.">			for(int j=0;j&lt;width;j++){</span>
+<span class="fc bfc" id="L166" title="All 2 branches covered.">				if(grid[j][i] != mark)</span>
+<span class="fc" id="L167">					win = false;	</span>
 			}
-<span class="fc bfc" id="L167" title="All 2 branches covered.">			if(win)</span>
-<span class="fc" id="L168">				return true;</span>
+<span class="fc bfc" id="L169" title="All 2 branches covered.">			if(win)</span>
+<span class="fc" id="L170">				return true;</span>
 		}
 		//check diagonals
-<span class="fc" id="L171">		win = true;</span>
-<span class="fc bfc" id="L172" title="All 2 branches covered.">		for(int i=0;i&lt;width;i++) {</span>
-<span class="fc bfc" id="L173" title="All 2 branches covered.">			if(grid[i][i] != mark)</span>
-<span class="fc" id="L174">				win = false;</span>
+<span class="fc" id="L173">		win = true;</span>
+<span class="fc bfc" id="L174" title="All 2 branches covered.">		for(int i=0;i&lt;width;i++) {</span>
+<span class="fc bfc" id="L175" title="All 2 branches covered.">			if(grid[i][i] != mark)</span>
+<span class="fc" id="L176">				win = false;</span>
 		}
-<span class="fc bfc" id="L176" title="All 2 branches covered.">		if(win)</span>
-<span class="fc" id="L177">				return true;</span>
-<span class="fc" id="L178">		win = true;</span>
-<span class="fc bfc" id="L179" title="All 2 branches covered.">		for(int i=0;i&lt;width;i++) {</span>
-<span class="fc bfc" id="L180" title="All 2 branches covered.">			if(grid[i][width-i-1] != mark)</span>
-<span class="fc" id="L181">				win = false;</span>
+<span class="fc bfc" id="L178" title="All 2 branches covered.">		if(win)</span>
+<span class="fc" id="L179">				return true;</span>
+<span class="fc" id="L180">		win = true;</span>
+<span class="fc bfc" id="L181" title="All 2 branches covered.">		for(int i=0;i&lt;width;i++) {</span>
+<span class="fc bfc" id="L182" title="All 2 branches covered.">			if(grid[i][width-i-1] != mark)</span>
+<span class="fc" id="L183">				win = false;</span>
 		}
-<span class="fc" id="L183">		return win;</span>
+<span class="fc" id="L185">		return win;</span>
     }
 	
     private boolean isTie() {
         
         /* Check the squares of the board to see if the game is a tie */
 
-<span class="pc bpc" id="L190" title="2 of 4 branches missed.">       if(!isMarkWin(Mark.X) &amp;&amp; !isMarkWin(Mark.O)) //double check if win already exists</span>
+<span class="pc bpc" id="L192" title="2 of 4 branches missed.">       if(!isMarkWin(Mark.X) &amp;&amp; !isMarkWin(Mark.O)) //double check if win already exists</span>
 	   {
-<span class="fc bfc" id="L192" title="All 2 branches covered.">		   for(int i=0;i&lt;width;i++) //traverse grid looking for empty squares</span>
-<span class="fc bfc" id="L193" title="All 2 branches covered.">			   for(int j=0;j&lt;width;j++)</span>
-<span class="fc bfc" id="L194" title="All 2 branches covered.">				   if(grid[i][j] == Mark.EMPTY)</span>
-<span class="fc" id="L195">					   return false; //if empty, there exists available square, game not over</span>
-<span class="fc" id="L196">			return true;</span>
+<span class="fc bfc" id="L194" title="All 2 branches covered.">		   for(int i=0;i&lt;width;i++) //traverse grid looking for empty squares</span>
+<span class="fc bfc" id="L195" title="All 2 branches covered.">			   for(int j=0;j&lt;width;j++)</span>
+<span class="fc bfc" id="L196" title="All 2 branches covered.">				   if(grid[i][j] == Mark.EMPTY)</span>
+<span class="fc" id="L197">					   return false; //if empty, there exists available square, game not over</span>
+<span class="fc" id="L198">			return true;</span>
 	   }
-<span class="nc" id="L198">	   return false;</span>
+<span class="nc" id="L200">	   return false;</span>
         
     }
 
@@ -203,7 +205,7 @@ public class TicTacToeModel{
         
         /* Return true if the game is over */
         
-<span class="nc bnc" id="L206" title="All 2 branches missed.">        return Result.NONE != getResult();</span>
+<span class="nc bnc" id="L208" title="All 2 branches missed.">        return Result.NONE != getResult();</span>
         
     }
 
@@ -211,7 +213,7 @@ public class TicTacToeModel{
         
         /* Getter for xTurn */
         
-<span class="nc" id="L214">        return xTurn;</span>
+<span class="nc" id="L216">        return xTurn;</span>
         
     }
 
@@ -219,7 +221,7 @@ public class TicTacToeModel{
         
         /* Getter for width */
         
-<span class="fc" id="L222">        return width;</span>
+<span class="fc" id="L224">        return width;</span>
         
     }
     

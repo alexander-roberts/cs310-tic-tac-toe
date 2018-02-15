@@ -1,9 +1,9 @@
 ==============================================================================
-20180214 21:05:41.307 - INFO - + START SUITE: Acceptancetest [ ]
+20180214 21:11:11.740 - INFO - + START SUITE: Acceptancetest [ ]
 ==============================================================================
-20180214 21:05:41.829 - INFO - +- START SUITE: Acceptancetest.TicTacToeGUITests [ ]
+20180214 21:11:12.251 - INFO - +- START SUITE: Acceptancetest.TicTacToeGUITests [ ]
 ==============================================================================
-20180214 21:05:41.833 - INFO - +-- START TEST: Win Diagonally as X [ ]
+20180214 21:11:12.256 - INFO - +-- START TEST: Win Diagonally as X [ ]
 ------------------------------------------------------------------------------
-20180214 21:05:41.837 - INFO - +--- START KW: Start New Game [ ]
-20180214 21:05:41.840 - INFO - +---- START KW: SwingLibrary.Start Application [ edu.jsu.mcis.TicTacToe ]
+20180214 21:11:12.260 - INFO - +--- START KW: Start New Game [ ]
+20180214 21:11:12.263 - INFO - +---- START KW: SwingLibrary.Start Application [ edu.jsu.mcis.TicTacToe ]
