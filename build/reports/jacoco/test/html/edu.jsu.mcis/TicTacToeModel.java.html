@@ -90,7 +90,7 @@ public class TicTacToeModel{
            empty! */
         
 
-<span class="fc bfc" id="L93" title="All 4 branches covered.">        if(isValidSquare(row,col) &amp;&amp; !isSquareMarked(row,col)){</span>
+<span class="pc bpc" id="L93" title="1 of 6 branches missed.">        if(isValidSquare(row,col) &amp;&amp; !isSquareMarked(row,col) &amp;&amp; !isGameover()){</span>
 <span class="fc bfc" id="L94" title="All 2 branches covered.">			if(xTurn)</span>
 <span class="fc" id="L95">				grid[row][col] = Mark.X;</span>
 			else
@@ -205,7 +205,7 @@ public class TicTacToeModel{
         
         /* Return true if the game is over */
         
-<span class="nc bnc" id="L208" title="All 2 branches missed.">        return Result.NONE != getResult();</span>
+<span class="pc bpc" id="L208" title="1 of 2 branches missed.">        return Result.NONE != getResult();</span>
         
     }
 

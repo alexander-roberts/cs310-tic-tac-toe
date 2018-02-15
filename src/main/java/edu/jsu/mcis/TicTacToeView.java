@@ -25,24 +25,23 @@ public class TicTacToeView extends JPanel implements ActionListener {
 				squares[row][col].addActionListener(this);
 				squares[row][col].setName("Square" + row + col);
 				squares[row][col].setPreferredSize(new Dimension(64, 64));
-				squares[row][col].setText(" ");
+				squares[row][col].setText("-");
 				squaresPanel.add(squares[row][col]);
 			}
 		}
 		
-		resultLabel = new JLabel();
+		resultLabel = new JLabel("XXXXXXXXXX");
+		resultLabel.setText("");
 		resultLabel.setName("ResultLabel");
-
+		setLayout(new BorderLayout());
         add(squaresPanel);
-		add(resultLabel);
+		add(resultLabel, BorderLayout.PAGE_END);
     }
 	
 	public void actionPerformed(ActionEvent e){
 		
 		String button = ((JButton)e.getSource()).getName();
-		System.out.println(button);
-		model.makeMark(button.charAt(6),button.charAt(7));
-		resultLabel.setText(button);
+		model.makeMark((int)(button.charAt(6))-48,(int)(button.charAt(7))-48);
 		
 	}
 	
@@ -57,6 +56,7 @@ public class TicTacToeView extends JPanel implements ActionListener {
 				}
 			}
 		}
+		showNextMovePrompt();
     }
 
     public void showNextMovePrompt() {
@@ -69,7 +69,7 @@ public class TicTacToeView extends JPanel implements ActionListener {
 			s+="1 (X) ";
 		else
 			s+="2 (O) ";
-		s+="Move:\nEnter the row and column numbers, separated by a space:";
+		s+="turn";
 		
 		resultLabel.setText(s);
     }
