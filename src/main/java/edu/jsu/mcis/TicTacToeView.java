@@ -38,9 +38,11 @@ public class TicTacToeView extends JPanel implements ActionListener {
     }
 	
 	public void actionPerformed(ActionEvent e){
+		System.out.println(button);
 		String button = ((JButton)e.getSource()).getName();
 		model.makeMark(button.charAt(6),button.charAt(7));
 		resultLabel.setText(button);
+		
 	}
 	
     public void viewModel() {
@@ -52,7 +54,6 @@ public class TicTacToeView extends JPanel implements ActionListener {
 				else
 					squares[i][j].setText(model.getMark(i,j).toString());
 		}
-		
     }
 
     public void showNextMovePrompt() {
