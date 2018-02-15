@@ -20,8 +20,11 @@ public class TicTacToeView {
 		for(int i=0;i<model.getWidth();i++){
 			System.out.print(i+ " ");
 			for(int j=0;j<model.getWidth();j++)
-				System.out.print(model.getMark(i,j).toString());
-			System.out.println("\n");
+				if(model.getMark(i,j) == model.Mark.EMPTY)
+					System.out.print("-");
+				else
+					System.out.print(model.getMark(i,j).toString());
+			System.out.println("");
 		}
 	
     }
