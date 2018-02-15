@@ -97,6 +97,7 @@ public class TicTacToeModel{
 				grid[row][col] = Mark.O;
 			xTurn  = !xTurn;
 			return true;
+			System.out.println(""+row+","+col+" updated.");
 		}
         return false;
     }
