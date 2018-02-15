@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.0 (Jython 2.7.0 on java1.8.0_121)" generated="20180214 20:26:32.900">
+<robot generator="Robot 3.0 (Jython 2.7.0 on java1.8.0_121)" generated="20180214 20:28:57.923">
 <suite source="C:\Users\Alexander\Documents\GitHub\cs310-tic-tac-toe\src\test\acceptancetest" name="Acceptancetest" id="s1">
 <suite source="C:\Users\Alexander\Documents\GitHub\cs310-tic-tac-toe\src\test\acceptancetest\TicTacToeGUITests.robot" name="TicTacToeGUITests" id="s1-s1">
 <test name="Win Diagonally as X" id="s1-s1-t1">
