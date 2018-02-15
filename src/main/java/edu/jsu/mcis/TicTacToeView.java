@@ -44,7 +44,7 @@ public class TicTacToeView extends JPanel implements ActionListener {
 	
     public void viewModel() {
         
-		for(int i=0;i<model.getWidth();i++){
+		for(int i=0;i<model.getWidth();i++){ //traverse view and update buttons
 			for(int j=0;j<model.getWidth();j++)
 				if(model.getMark(i,j) == TicTacToeModel.Mark.EMPTY)
 					squares[i][j].setText("-");
